@@ -24,8 +24,11 @@ def Q2():
     for item in tosql:
         pack=[item + start]
         pack.extend(list(tosql[item]))
-        curr.execute('INSERT INTO ys (id, author_name, time, topic, title, text) VALUES (%s,%s,%s,%s,%s,%s)', tuple(pack))
-        conn.commit()
+        if not curr.execute('select * from ys where text = %s', (tosql[item][-1])):
+            curr.execute('INSERT INTO ys (id, author_name, time, topic, title, text) VALUES (%s,%s,%s,%s,%s,%s)', tuple(pack))
+            conn.commit()
+        else:
+            print('item repeated!')
     conn.close()
 
 def Q3():
