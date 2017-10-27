@@ -1,0 +1,9 @@
+$ mysql -u exam -h 182.254.242.102 -p
+$ show databases;
+$ select exam;
+$ create table ys
+$ (id smallint,
+$ name char(30);
+$ alter table ys modify id smallint primary key auto_increment not null;
+$ insert into ys values (1,'Hello world');
+$ insert into ys values (2,'Hello SQL');
