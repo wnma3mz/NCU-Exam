@@ -1,0 +1,9 @@
+# Windows
+desktop.ini
+
+# Python cache
+*.pyc
+
+# Temps
+Exam
+main_ys_orig.py
