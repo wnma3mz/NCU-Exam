@@ -2,7 +2,7 @@
 
 import os,re,sys
 
-'''获取文件架内文件'''
+'''获取文件夹内文件'''
 dl = os.listdir ()
 
 for cl in dl:
